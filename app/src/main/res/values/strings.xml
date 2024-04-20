@@ -36,7 +36,7 @@
     <string name="user_full_name">User Full Name</string>
     <string name="user_gmail_com">user@gmail.com</string>
     <string name="dark_mode">Dark Mode</string>
-    <string name="SERVER_URL">https://kbsmods.com/products.json</string>
+    <string name="SERVER_URL">https://teamdd.shop/mob/mods.json</string>
     <string name="ORDER_VERIFY_URL" />
     <string name="ORDER_CREATE_URL" />
 </resources>
