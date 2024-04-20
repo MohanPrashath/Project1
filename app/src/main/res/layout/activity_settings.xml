@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_scrollFlags="scroll">
+
+        <ImageView
+            android:id="@+id/itemBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/white" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/font_app"
+            android:text="Settings"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/imageBorderColor"
+                android:src="@drawable/ic_user"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/userFullName"
+                style="@style/viewParent.headerText"
+                android:text="@string/user_full_name"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/userEmail"
+                style="@style/viewParent.headerText"
+                android:text="@string/user_gmail_com"
+                android:textSize="16sp"
+                android:textColor="#5D5C5C"
+                android:layout_below="@id/userFullName"
+                android:layout_toRightOf="@id/userImage"/>
+        </RelativeLayout>
+
+        <Switch
+            android:id="@+id/darkModeSwitch"
+            style="@style/settingsText"
+            android:drawableStart="@drawable/ic_dark_mode"
+            android:text="@string/dark_mode"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="Regional"/>
+
+        <TextView
+            android:id="@+id/lang"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/ic_languages"
+            android:text="Language" />
+
+        <TextView
+
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="App ver 2.0.1"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+</LinearLayout>
